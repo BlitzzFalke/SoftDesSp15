@@ -1,0 +1,6 @@
+astring = thing
+alist = list(astring)
+new string = ''.join(alist)
+
+for loop
+i count = length of word
