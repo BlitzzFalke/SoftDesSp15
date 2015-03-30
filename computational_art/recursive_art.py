@@ -119,7 +119,7 @@ def color_map(val):
     return int(color_code)
 
 
-def test_image(filename, x_size=350, y_size=350):
+def test_image(filename, x_size=500, y_size=500):
     """ Generate test image with random pixels and save as an image file.
 
         filename: string filename for image (should be .png)
@@ -139,16 +139,16 @@ def test_image(filename, x_size=350, y_size=350):
     im.save(filename)
 
 
-def generate_art(filename, x_size=350, y_size=350):
+def generate_art(filename, x_size=1600, y_size=900):
     """ Generate computational art and save as an image file.
 
         filename: string filename for image (should be .png)
         x_size, y_size: optional args to set image dimensions (default: 350)
     """
     # Functions for red, green, and blue channels - where the magic happens!
-    red_function = build_random_function(7, 9)
-    green_function = build_random_function(7, 9)
-    blue_function = build_random_function(7, 9)
+    red_function = build_random_function(1, 15)
+    green_function = 2*build_random_function(1, 15)
+    blue_function = build_random_function(1, 15)
 
     # Create image and loop over all pixels
     im = Image.new("RGB", (x_size, y_size))
@@ -173,7 +173,19 @@ if __name__ == '__main__':
     # Create some computational art!
     # TODO: Un-comment the generate_art function call after you
     #       implement remap_interval and evaluate_random_function
-    generate_art("myart.png")
+    generate_art("recursionbackground3.png")
+    generate_art("recursionbackground6.png")
+    generate_art("recursionbackground10.png")
+    generate_art("recursionbackground11.png")
+    #generate_art("recursionbackground12.png")
+    #generate_art("recursionbackground13.png")
+    #generate_art("recursionbackground14.png")
+    #generate_art("recursionbackground15.png")
+    #generate_art("recursion68.png")
+    #generate_art("recursion69.png")
+    #generate_art("recursion70.png")
+
+
 
     # Test that PIL is installed correctly
     # TODO: Comment or remove this function call after testing PIL install

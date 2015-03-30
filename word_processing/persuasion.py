@@ -3,7 +3,7 @@ from pattern.en import *
 import string
 
 persuassion_full_text = 'persuasion.txt'
-#print persuassion_full_text''''''''''''''''''''' 
+#print persuassion_full_text
 
 #ef get_word_list(filename):
 	# = openfile
